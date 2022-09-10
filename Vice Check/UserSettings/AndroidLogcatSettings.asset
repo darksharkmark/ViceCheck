@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "fc22e5",
         "name": "com.DefaultCompany.com.unity.template.mobile2D",
-        "processId": 9371,
+        "processId": 13838,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -24,6 +24,12 @@
             "deviceId": "fc22e5",
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
             "processId": 9371,
+            "exited": false
+        },
+        {
+            "deviceId": "fc22e5",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 13838,
             "exited": false
         }
     ],
