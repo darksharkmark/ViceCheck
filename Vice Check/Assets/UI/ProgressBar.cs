@@ -116,6 +116,7 @@ public class ProgressBar : MonoBehaviour
         {
             _vice = PlayerPrefs.GetString(viceKey, "");
         }
+        _subtitle.text = _vice + " free since";
 
         if (PlayerPrefs.HasKey(startYearKey))
         {
@@ -153,6 +154,7 @@ public class ProgressBar : MonoBehaviour
         }
 
         _startTime = new System.DateTime(savedYear, savedMonth, savedDay, savedHour, savedMinute, savedSecond);
+        _startDateUI.text = _startTime.ToString("D");
     }
 
     public void StartTracker()
@@ -196,7 +198,7 @@ public class ProgressBar : MonoBehaviour
         _progressCircle.fillAmount = 1f;
         _secondaryProgressCircle.fillAmount = 0f;
 
-        _subtitle.text = "";
+        _subtitle.text = "today's a new day!";
 
         _startButton.gameObject.SetActive(true);
         _resetButton.gameObject.SetActive(false);

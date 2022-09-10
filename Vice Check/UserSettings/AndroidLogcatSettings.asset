@@ -1,13 +1,32 @@
 {
-    "m_SelectedDeviceId": "",
+    "m_SelectedDeviceId": "fc22e5",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "fc22e5",
+        "name": "com.DefaultCompany.com.unity.template.mobile2D",
+        "processId": 9371,
         "exited": false
     },
     "m_SelectedPriority": 0,
-    "m_KnownPackagesForSerialization": [],
+    "m_KnownPackagesForSerialization": [
+        {
+            "deviceId": "fc22e5",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 5928,
+            "exited": false
+        },
+        {
+            "deviceId": "fc22e5",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 7274,
+            "exited": false
+        },
+        {
+            "deviceId": "fc22e5",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 9371,
+            "exited": false
+        }
+    ],
     "m_Tags": {
         "m_Entries": [
             {
@@ -41,9 +60,20 @@
         ]
     },
     "m_MemoryViewerState": {
-        "MemoryWindowHeight": 0.0,
-        "MemoryWindowWidth": 0.0,
-        "MemoryTypeEnabled": [],
+        "MemoryWindowHeight": 300.0,
+        "MemoryWindowWidth": 170.0,
+        "MemoryTypeEnabled": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
         "MemoryGroup": 2,
         "Behavior": 0
     },

@@ -573,6 +573,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1185203187}
     m_Modifications:
+    - target: {fileID: 1469188651, guid: 16e9eb377b7ef88418b1a78b98c6a169, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1469188652, guid: 16e9eb377b7ef88418b1a78b98c6a169, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1469188652, guid: 16e9eb377b7ef88418b1a78b98c6a169, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1469188652, guid: 16e9eb377b7ef88418b1a78b98c6a169, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1469188652, guid: 16e9eb377b7ef88418b1a78b98c6a169, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1469188652, guid: 16e9eb377b7ef88418b1a78b98c6a169, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 232.88501
+      objectReference: {fileID: 0}
+    - target: {fileID: 1469188652, guid: 16e9eb377b7ef88418b1a78b98c6a169, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 140.36804
+      objectReference: {fileID: 0}
+    - target: {fileID: 1469188652, guid: 16e9eb377b7ef88418b1a78b98c6a169, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1469188652, guid: 16e9eb377b7ef88418b1a78b98c6a169, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -244.70996
+      objectReference: {fileID: 0}
     - target: {fileID: 68291142331445983, guid: 16e9eb377b7ef88418b1a78b98c6a169, type: 3}
       propertyPath: m_Color.a
       value: 0.5019608
@@ -672,6 +708,14 @@ PrefabInstance:
     - target: {fileID: 1197268562216039205, guid: 16e9eb377b7ef88418b1a78b98c6a169, type: 3}
       propertyPath: m_FillAmount
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3508421579957218802, guid: 16e9eb377b7ef88418b1a78b98c6a169, type: 3}
+      propertyPath: m_text
+      value: today's a new day!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7364418418876233365, guid: 16e9eb377b7ef88418b1a78b98c6a169, type: 3}
+      propertyPath: m_text
+      value: Saturday, 10 September 2022
       objectReference: {fileID: 0}
     - target: {fileID: 7556239010314448239, guid: 16e9eb377b7ef88418b1a78b98c6a169, type: 3}
       propertyPath: m_Color.a
