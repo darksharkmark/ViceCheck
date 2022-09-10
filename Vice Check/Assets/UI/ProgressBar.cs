@@ -26,6 +26,7 @@ public class ProgressBar : MonoBehaviour
     [SerializeField] Button _resetButton;
 
     [SerializeField] Image _progressCircle;
+    [SerializeField] Image _secondaryProgressCircle;
     [SerializeField] TMPro.TextMeshProUGUI _timeUI;
     [SerializeField] TMPro.TextMeshProUGUI _status;
     [SerializeField] TMPro.TextMeshProUGUI _startDateUI;
@@ -193,6 +194,7 @@ public class ProgressBar : MonoBehaviour
         _status.text = "it's okay, try again!";
         _startDateUI.text = System.DateTime.Now.ToString("D");
         _progressCircle.fillAmount = 1f;
+        _secondaryProgressCircle.fillAmount = 0f;
 
         _subtitle.text = "";
 
@@ -255,7 +257,12 @@ public class ProgressBar : MonoBehaviour
         var currentTime = System.DateTime.Now;
         _totalTime = currentTime - _startTime;
 
-        _progressCircle.fillAmount = GetFillPercentage();
+        _progressCircle.fillAmount = GetFillPercentage(_currentTimePeriod);
+
+        if(_currentTimePeriod != TimePeriod.Seconds)
+        {
+            _secondaryProgressCircle.fillAmount = GetFillPercentage(_currentTimePeriod - 1);
+        }
     }
 
     void SetTimePeriod()
@@ -280,13 +287,13 @@ public class ProgressBar : MonoBehaviour
                 }
             case TimePeriod.Hours:
                 {
-                    if (_totalTime.Hours > 24)
+                    if (_totalTime.TotalHours > 24)
                     {
                         _currentTimePeriod = TimePeriod.Days;
                     }
                     break;
                 }
-            case TimePeriod.Days:// TODO: need accurate months
+            case TimePeriod.Days:
                 {
                     if (_totalTime.Days > System.DateTime.DaysInMonth(System.DateTime.Now.Year, System.DateTime.Now.Month)) 
                     {
@@ -301,11 +308,11 @@ public class ProgressBar : MonoBehaviour
     }
 
 
-    float GetFillPercentage()
+    float GetFillPercentage(TimePeriod timePeriod)
     {
         float result = 0;
 
-        switch (_currentTimePeriod)
+        switch (timePeriod)
         {
             case TimePeriod.Seconds:
                 {
@@ -319,17 +326,19 @@ public class ProgressBar : MonoBehaviour
                 }
             case TimePeriod.Hours:
                 {
-                    result = _totalTime.Hours / 24;
+                    result = _totalTime.Hours / 24f;
                     break;
                 }
             case TimePeriod.Days:
                 {
-                    result = _totalTime.Days / System.DateTime.DaysInMonth(System.DateTime.Now.Year, System.DateTime.Now.Month);
+                    result = _totalTime.Days / (System.DateTime.DaysInMonth(System.DateTime.Now.Year, System.DateTime.Now.Month)) * 1f;
                     break;
                 }
-            //case TimePeriod.Months:
-            //    result = timeSpan.Days * 7 * 4 / 12;
-            //    break;
+            case TimePeriod.Months:
+                {
+                    result = _totalTime.Days * System.DateTime.DaysInMonth(System.DateTime.Now.Year, System.DateTime.Now.Month) / 12f;
+                    break;
+                }
             //case TimePeriod.Years:
             //    // none
             //    break;
